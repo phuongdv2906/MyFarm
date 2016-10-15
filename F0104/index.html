@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Include jQuery Mobile stylesheets -->
+        <link rel="stylesheet" href="../F0000/css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Include the jQuery library -->
+        <script src="../F0000/js/jquery-1.11.3.min.js"></script>
+
+        <!-- Include the jQuery Mobile library -->
+        <script src="../F0000/js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="../F0000/js/common.js"></script>
+        <script src="../F0000/js/database.js"></script>
+
+        <script src="js/database.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <a href="#" data-icon="home" data-transition="slidefade" onclick="window.location.href = '../Home/index.html'">Trang chủ</a>
+                <h1>Các loại thức ăn</h1>
+                <a href="#target-info" data-icon="search" class="ui-btn-right" id="btnFilter">Lọc</a>
+            </div>
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" data-filter="true" id="lstTargetView">
+                    <li class="target-item" value="0">
+                        <a href="#">Ao 1</a>
+                    </li>
+                    <li class="target-item" value="1">
+                        <a href="#">Ao 2</a>
+                    </li>
+                    <li class="target-item" value="2">
+                        <a href="#">Ao 3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="dialog" id="target-info">
+            <span style="display: none" id="target-id"></span>
+            <div data-role="header">
+                <h1 id="lblTargetName">Target</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"><input type="date"  id="btnStartDate"/></div>
+                    <div class="ui-block-b"><input type="date" id="btnEndDate"/></div>
+                </div>
+                <input type="button" id="btnSearch" value="Tìm"/>
+                <div class="target-food">
+                    <ul data-role="listview" id="lstFood" data-count-theme="b" data-inset="true">
+                    </ul>
+                    <span id="lblFoodTotal" style="color: red; font-weight: bold"></span>
+                </div>
+                <div class="target-other">
+                    <ul data-role="listview" id="lstOther" data-count-theme="b" data-inset="true">
+                    </ul>
+                    <span id="lblOtherTotal" style="color: red; font-weight: bold"></span>
+                </div>
+                <div class="target-revenue">
+                    <ul data-role="listview" id="lstRevenue" data-count-theme="b" data-inset="true">
+                    </ul>
+                    <span id="lblRevenueTotal" style="color: red; font-weight: bold"></span>
+                </div>
+            </div>
+            <div data-role="footer" style="text-align: center;">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"><span id="lblGet">XXX</span></div>
+                    <div class="ui-block-"><span id="lblLost">Thu</span></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

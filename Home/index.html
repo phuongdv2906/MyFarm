@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Include jQuery Mobile stylesheets -->
+        <link rel="stylesheet" href="../F0000/css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Include the jQuery library -->
+        <script src="../F0000/js/jquery-1.11.3.min.js"></script>
+
+        <!-- Include the jQuery Mobile library -->
+        <script src="../F0000/js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="../F0000/js/common.js"></script>
+        <script src="../F0000/js/database.js"></script>
+
+        <script src="js/database.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="page-home">
+            <div data-role="header">
+                <a href="#" data-icon="delete" class="ui-btn-left" id="btnDeleteAll">Xóa hết</a>
+                <h1>Trang chủ</h1>
+                <a href="#" data-icon="plus" class="ui-btn-right" id="btnBackup" data-rel="dialog">Sao lưu</a>
+            </div>
+            <div data-role="main" class="ui-content">
+                <a href="#" class="ui-btn" data-transition="slidefade" onclick="window.location.href = '../F0101/index.html'">Chi phí</a>
+                <a href="#" class="ui-btn" data-transition="slidefade" onclick="window.location.href = '../F0102/index.html'">Đối tượng</a>
+                <a href="#" class="ui-btn" data-transition="slidefade" onclick="window.location.href = '../F0103/index.html'">Thức ăn</a>
+                <a href="#" class="ui-btn" data-transition="slidefade" onclick="window.location.href = '../F0104/index.html'">Thống kê</a>
+            </div>
+        </div>
+    </body>
+</html>

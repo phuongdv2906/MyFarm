@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Include jQuery Mobile stylesheets -->
+        <link rel="stylesheet" href="../F0000/css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Include the jQuery library -->
+        <script src="../F0000/js/jquery-1.11.3.min.js"></script>
+
+        <!-- Include the jQuery Mobile library -->
+        <script src="../F0000/js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="../F0000/js/common.js"></script>
+        <script src="../F0000/js/database.js"></script>
+
+        <script src="js/database.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <a href="#" data-icon="home" data-transition="slidefade" onclick="window.location.href = '../Home/index.html'">Trang chủ</a>
+                <h1>Thêm đối tượng</h1>
+                <a href="#" data-icon="plus" class="ui-btn-right" id="btnAdd">Thêm</a>
+            </div>
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" data-filter="true" id="lstTargetView">
+                    <li class="target-item" value="0">
+                        <a href="#">Ao 1</a>
+                    </li>
+                    <li class="target-item" value="1">
+                        <a href="#">Ao 2</a>
+                    </li>
+                    <li class="target-item" value="2">
+                        <a href="#">Ao 3</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div data-role="dialog" id="target-info">
+            <div data-role="header">
+                <h1>Thông tin đối tượng</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <span style="display: none" id="targetId"></span>
+                <input type="text" maxlength="50" id="txtName" placeholder="Tên"/>
+                <input type="number" id="txtArea" placeholder="Diện tích"/>
+                <select id="lstStatus">
+                    <option value="0">Sửa chữa</option>
+                    <option value="1">Hoạt động</option>
+                </select>
+                <textarea id="txtContent" placeholder="Ghi chú"></textarea>
+            </div>
+            <div data-role="footer" style="text-align: center;">
+                <div class="ui-grid-c">
+                    <div class="ui-block-a"><input type="button" value="Lưu" id ="btnSave" data-icon="check"/></div>
+                    <div class="ui-block-b block-btnDelete"><input type="button" value="Xóa" id ="btnDelete" data-icon="delete"/></div>
+                    <div class="ui-block-c"></div>
+                    <div class="ui-block-d"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
